@@ -39,3 +39,32 @@ Various algorithms and techniques exist for both types of summarization, includi
 
 
 # Code example
+
+Step 1: Preprocessing the Text
+The code starts by defining a function named preprocess_text(text). This function takes the input text and performs some preprocessing steps to clean the text. It removes special characters and digits using regular expressions, and then converts the text to lowercase. The goal of this preprocessing is to make the text consistent and remove unnecessary noise.
+
+Step 2: Calculating Word Frequency
+The code uses the Counter class from Python's collections module to count the frequency of each word in the preprocessed text. The Counter class is a convenient way to tally the occurrence of each word in the text.
+
+Step 3: Calculating Sentence Score
+Next, the code defines a function named sentence_score(sentence, word_freq). This function takes a sentence and the word frequency dictionary as input. It calculates the score of the sentence based on the average word frequency of the words in the sentence. The goal is to give higher scores to sentences containing more important words.
+
+Step 4: Extractive Summarization
+The main function for extractive summarization is extractive_summarization(text, num_sentences=3). It takes the input text and an optional parameter num_sentences, which specifies the number of sentences in the summary (default is 3).
+
+In the extractive_summarization function:
+
+We preprocess the input text using the preprocess_text function to remove noise and make the text consistent.
+We tokenize the preprocessed text into sentences using the period (.) as the sentence delimiter. This creates a list of sentences.
+We calculate word frequency using the Counter class to count the occurrences of words in the text.
+We calculate the scores of each sentence using the sentence_score function. Each sentence is scored based on the average word frequency of its words.
+We rank the sentences based on their scores in descending order (higher scores first).
+We select the top num_sentences sentences with the highest scores to form the summary.
+Finally, we join the selected sentences into a single string to create the extractive summary.
+Step 5: Example Text and Summarization
+The code includes an example text that we want to summarize. The text is about artificial intelligence, natural language processing, and text summarization.
+
+In the example, we call the extractive_summarization function with the provided text. The default value of num_sentences is 3, so the function generates a summary consisting of the top 3 sentences from the original text.
+
+Step 6: Displaying the Summary
+Finally, the code prints the generated summary to the console.
