@@ -1,4 +1,4 @@
-# Week 18: Text Summarization: Abstractive and Extractive Approaches
+# Week 17: Text Summarization: Abstractive and Extractive Approaches
 Text summarization is a subfield of Natural Language Processing (NLP) focused on creating a concise summary of a longer text while maintaining its key information and overall meaning. This can be particularly useful for quickly understanding the content of large documents or aggregating information from multiple sources. There are two main approaches to text summarization: abstractive and extractive.
 
 Extractive Summarization
